@@ -335,8 +335,6 @@
     </div>
 </div>
 
-
-
 <script>
 document.addEventListener("DOMContentLoaded", () => {
     function isMobile() {
@@ -364,13 +362,42 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    loadImages();
+    function loadVideos() {
+        const activeContainer = isMobile() ? '.grid-container-phone' : '.grid-container';
+        const videos = document.querySelectorAll(`${activeContainer} video.loading`);
+        
+        videos.forEach(video => {
+            if (video.src && video.readyState < 3) {
+                video.addEventListener('loadeddata', () => {
+                    video.classList.remove('loading');
+                    video.classList.add('loaded');
+                }, { once: true });
+                
+                video.addEventListener('error', () => {
+                    console.warn(`Failed to load video: ${video.src}`);
+                    video.classList.remove('loading');
+                }, { once: true });
+                
+                video.load();
+            } else if (video.readyState >= 3) {
+                video.classList.remove('loading');
+                video.classList.add('loaded');
+            }
+        });
+    }
+
+    function loadMedia() {
+        loadImages();
+        loadVideos();
+    }
+
+    loadMedia();
 
     let resizeTimeout;
     window.addEventListener('resize', () => {
         clearTimeout(resizeTimeout);
         resizeTimeout = setTimeout(() => {
-            loadImages();
+            loadMedia();
         }, 250);
     });
 });
