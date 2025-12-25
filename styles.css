@@ -178,17 +178,20 @@ a{
     display: block; /* Prevent gaps below images */
 }
 
+.thumbnail video {
+    width: 31.75vw; /* Scale images to fit the grid item */
+    height: auto; 
+    padding: 0;
+    margin: 0; /* Remove any margin */
+    border-radius: .3vw;
+    display: block; /* Prevent gaps below images */
+}
+
 .border{
     border-radius: .3vw;;
     /* border: 1px dotted var(--color);  */
     box-sizing: border-box;
 }
-
-  #editorial img{
-    object-fit: cover;
-    height: 31.75vw;
-    width: 31.75vw;
-  }
 
 .two {
     display: flex; /* Layout the images in a row */
@@ -206,6 +209,12 @@ a{
     padding: 0; /* Remove any padding */
     border: none; /* Ensure no borders add space */
 }
+
+  #editorial img{
+    object-fit: cover;
+    height: 31.75vw;
+    width: 31.75vw;
+  }
 
 #cover1, #cover4 {
     transform: rotate(180deg); /* Rotate specific images */
@@ -372,7 +381,7 @@ to {
 @media only screen and (min-width: 500px){
 
     .thumbnail:hover{
-        border: .5px dotted var(--color);
+        /* border: .5px dotted var(--color); */
     }
     
     .thumbnail:hover .image {
@@ -448,7 +457,6 @@ to {
         margin: 0 auto;
         width: 95vw; /* Thumbnails take full width */
         padding: 0;
-        border: 1px dotted var(--color); /* Keep the border */
     }
     
     .thumbnail img {
@@ -459,7 +467,15 @@ to {
         border-radius: .3vw;
     }
 
-    #editorial img{
+    .thumbnail video {
+        width: 95vw; /* Scale images to fit the grid item */
+        height: auto; 
+        padding: 0;
+        margin: 0;
+        border-radius: .3vw;
+    }
+
+     #editorial img{
         object-fit: cover;
         height: 95vw;
         width: 95vw;
@@ -577,11 +593,20 @@ to {
         border-radius: .3vw;
     }
 
+    .thumbnail video {
+        width: 90vw; /* Scale images to fit the grid item */
+        height: auto; 
+        padding: 0;
+        margin: 0;
+        border-radius: .3vw;
+    }
+
     #editorial img{
         object-fit: cover;
         height: 90vw;
         width: 90vw;
       }
+
 
       .circle{
         padding: 5vw;

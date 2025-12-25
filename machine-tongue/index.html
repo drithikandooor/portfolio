@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Drithi Kandoor</title>
+    <link rel="icon" type="image/x-icon" href="../icon.ico">
+</head>
+<body>
+    
+    <div class="header">
+        <div class="bio">
+            <a href="../" class="name">Drithi Kandoor</a>
+        </div>
+        <div class="info"><a href="../info/">Info</a></div>
+        <div class="archive"><a href="../archive/">Archive</a></div>
+    </div>
+
+    <div id="top-header"></div>
+
+<div class="grid-container">
+    <div class="grid-column">
+        <div class="grid-item information">
+       <a href=""><span class="title">
+        Machine Tongue
+    </span></a><br>
+        <div class="subinfo">
+        <span class="subtitle">(creative coding) (computational design)<br>(experimental graphics) (book design)<br>(sound design) (textiles)</span>
+        <div class="time">
+            In → Spring 2025<br>
+            Under → Joe Marianek & Dinah Fried
+        </div>
+        <span class="anchor"><a href="https://machinetongue.com/" target="_blank">Initiate a Conversation</a></span><br>
+        <p>Machine Tongue is a speculative "mother tongue" for machines, re-imagining how machine language could evolve without human intervention. Unlike technologies translating machine processes into human-comprehensible formats, my thesis reverses the paradigm, making humans spectators to machine-generated dialogues. In an AI-driven world, could this redefine our understanding of intelligence?
+        <br><br>
+        Originally designed for calculations, computers were inspired by the Jacquard loom. Over time, native binary has been translated into artificial forms to make it easier for us to understand and write. How could machines communicate if left to their own devices?
+        The machines create spoken and written dialogues... but not in isolation. Are we witnessing mere computation, or the emergence of a new linguistic system that evolves alongside us rather than solely for us?
+        </p>
+         </div>
+        </div>
+    </div>
+
+
+    <div class="grid-column">
+        <div class="grid-item scroll">
+            <div class="full first">
+              <video src="../imgs/machine-tongue/machine-tongue-web.mp4" autoplay loop muted playsinline></video>
+            </div>
+            <div class="full">
+                <div class="two">
+                    <video src="../imgs/machine-tongue/web-right.mp4" autoplay loop muted playsinline></video>
+                    <div class="video-sound-container">
+                        <video class="sound" src="../imgs/machine-tongue/Phone.mp4" autoplay loop muted playsinline></video>
+                        <div class="sound-label">Hover to Listen</div>
+                    </div>
+                </div>
+            </div>
+            <div class="full first">
+              <video src="../imgs/machine-tongue/MachineMarks.mp4" autoplay loop muted playsinline></video>
+            </div>
+            <div class="full">
+                <div class="two">
+                    <img src="../imgs/machine-tongue/MachineMarks-edge.jpg">
+                    <img src="../imgs/machine-tongue/MachineMarks-grid.jpg">
+                </div>
+            </div>
+            <div class="full first">
+              <video src="../imgs/machine-tongue/Manual.mp4" autoplay loop muted playsinline></video>
+            </div>
+            <div class="full first">
+              <img src="../imgs/machine-tongue/manual-grid.png">
+            </div>
+            <div class="full first">
+              <img src="../imgs/machine-tongue/weave.png">
+            </div>
+            <div class="full">
+                <div class="two">
+                    <img src="../imgs/machine-tongue/weave-grid.png">                    
+                    <div class="video-sound-container">
+                        <video class="sound" src="../imgs/machine-tongue/SplitScreen.mp4" autoplay loop muted playsinline></video>
+                        <div class="sound-label">Hover to Listen</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+
+<div class="copyright">
+    <span id="copy">All Work On Site © Drithi Kandoor 2025 [drithikandoor@gmail.com]</span>
+</div>
+<div class="footer"></div>
+
+<script>
+    // Select all videos with the 'sound' class
+    const soundVideos = document.querySelectorAll('video.sound');
+    
+    soundVideos.forEach(video => {
+        const container = video.closest('.video-sound-container');
+        const label = container.querySelector('.sound-label');
+        
+        // Unmute on hover
+        container.addEventListener('mouseenter', function() {
+            video.muted = false;
+            label.style.opacity = '0';
+        });
+
+        const randomDegree = Math.random() * 10 - 5; 
+        label.style.transform = `rotate(${randomDegree}deg)`;
+        
+        // Mute on mouse leave
+        container.addEventListener('mouseleave', function() {
+            video.muted = true;
+            label.style.opacity = '1';
+        });
+    });
+</script>
+
+<script src="../main2.js"></script>
+</body>
+</html>
