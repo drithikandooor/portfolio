@@ -309,14 +309,12 @@ p>a{
         width: 23vw;
         /* animation: stack2 .1s forwards ease-in; */
     }
+    
+
 
     .subinfo{
-        position: relative;
-        /* height:0vh;
-        opacity: 0;
-        animation: stack3 1s forwards ease-in;
-        animation-delay: 1.5s; */
-    }
+    position: relative;
+}
 
     .projpoints {
         width:  .65vw;
