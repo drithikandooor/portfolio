@@ -362,6 +362,11 @@ p>a{
         animation: stack 1.25s forwards ease-in;
     }
 
+    .full video{
+        width: 100%;
+        border-radius: .3vw;
+    }
+
     .anchor a{
         cursor: alias;
     }
@@ -407,6 +412,11 @@ p>a{
     .twoo2 img{
         width: auto!important;
         height: 28.5vw;
+    }
+
+    .twoo3 img{
+        width: auto!important;
+        height: 29.7vw;
     }
 
     .carousel {
@@ -595,6 +605,11 @@ to {
     .twoo2 img{
         width: auto!important;
         height:38vw;
+    }
+
+    .twoo3 img{
+        width: auto!important;
+        height:39.5vw;
     }
 
     .third img {
