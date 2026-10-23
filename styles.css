@@ -129,7 +129,7 @@ a{
     display: flex;
     gap: 0vw; /* Space between columns */
     width: 98vw;
-    margin-top: 12vw;
+    margin-top: 10vw;
     margin-bottom: 8vw;
     /* height: 0; */
     opacity: 0;
@@ -436,7 +436,7 @@ to {
     .grid-container {
         display: block; /* Stack columns vertically */
         width: 95vw;
-        margin: 20vw auto 8vw; /* Center the grid vertically */
+        margin: 15vw auto 8vw; /* Center the grid vertically */
     }
     
     .grid-column {

@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     
     
-    const skills = ['graphic designer', 'creative coder', 'digital designer', 'multidisciplinary artist'];
+    const skills = ['graphic designer', 'creative coder', 'multidisciplinary artist'];
     const skillSpans = document.querySelectorAll('.skills');
     const skillTexts = document.querySelectorAll('.skill-text');
     let index = 0;

@@ -96,7 +96,7 @@ body{
 } */
 
 .bio{
-    width: 65%;
+    width: 70%;
     /* border: 1px dotted var(--color); */
     border-radius: 50%;
     /* padding: 2vw 2vw 2vw 2vw; */
@@ -140,7 +140,7 @@ a:hover{
 .grid-container {
     display: flex;
     gap: 1vw; /* Space between the columns */
-    width: 98vw;
+    width: 98.5vw;
     margin-top: 9vw;
     margin-bottom: 8vw;
 }
@@ -273,6 +273,10 @@ p:not(:first-of-type) {
     .blur {
         filter: blur(4px);
       }
+ 
+.exp{
+    font-size: 1.1vw;
+}     
       
 .copyright{
     color: var(--black);
@@ -494,6 +498,10 @@ to {
         border-radius: .3vw;
     }
 
+    .bio-laptop{
+        display: none;
+    }
+
 }
   
 
@@ -687,7 +695,7 @@ to {
     }
     
     .grid-item{
-        text-align: center;
+        text-align: left;
     }
 
 }
