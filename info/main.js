@@ -94,7 +94,8 @@ document.body.addEventListener('mousemove', (event) => {
 document.addEventListener('scroll', function () {
     const gridContainer = document.querySelector('.grid-container');
     const topHeader = document.getElementById('top-header');
-    
+    if (!gridContainer || !topHeader) return;
+
     // Check if the viewport width is 490px or less
     if (window.innerWidth <= 490) {
         // Get the distance of the gridContainer from the top of the page

@@ -129,6 +129,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
     document.querySelectorAll('.thumbnail').forEach(thumbnail => {
         const circle = thumbnail.querySelector('.circle');
+        if (!circle) return;
         const text = circle.querySelector('.text');
     
         thumbnail.addEventListener('mouseenter', () => {
